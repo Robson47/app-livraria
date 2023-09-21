@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+export default function CreateUser() {
     return (
         <View style={styles.container}>
             <Text>TELA DE CRIAÇÃO DE USUÁRIO</Text>
@@ -13,7 +13,7 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#111',
+        backgroundColor: '#777',
         alignItems: 'center',
         justifyContent: 'center',
     },

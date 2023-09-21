@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+export default function Login() {
     return (
         <View style={styles.container}>
             <Text>TELA DE LOGIN</Text>
@@ -13,7 +13,7 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#111',
+        backgroundColor: '#666',
         alignItems: 'center',
         justifyContent: 'center',
     },
