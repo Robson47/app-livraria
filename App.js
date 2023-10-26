@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { NavigationContainer } from "@react-navigation/native";
+import { DarkTheme, NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Login from './screens/Login';
 import CreateUser from './screens/CreateUser';
+import DrawerMenu from './drawerMenu/DrawerMenu';
 import FeedBooks from './screens/FeedBook';
 import DetailBook from './screens/DetailBook';
 
@@ -16,13 +17,31 @@ export default function App() {
         <Stack.Screen
           name="Login"
           component={Login}
-          options={{ title: "LOGIN" }}
+          options={{ 
+            title: "LOGIN", 
+            headerTransparent: true,
+            headerShown: false
+          }}
         />
 
         <Stack.Screen
           name="CreateUser"
           component={CreateUser}
-          options={{ title: "CADASTRO" }}
+          options={{ 
+            title: "CADASTRO",
+            headerTransparent: true,
+            headerShown: false
+          }}
+        />
+
+        <Stack.Screen
+          name="DrawerMenu"
+          component={DrawerMenu}
+          options={{
+            title: "MENU",
+            headerTransparent: true,
+            headerShown: false
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

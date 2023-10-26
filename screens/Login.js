@@ -26,7 +26,10 @@ export default function Login({ navigation }) {
 
             {/* BOTÃO DE LOGIN*/}
             <TouchableOpacity style={styles.btnLogin}>
-                <Text style={styles.txtLogin}>
+                <Text style={styles.txtLogin}
+                    onPress={() => {
+                        navigation.navigate('DrawerMenu')
+                    }}>
                     Login
                 </Text>
             </TouchableOpacity>
@@ -67,7 +70,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#161c3d',
-        padding: 10
+        padding: 10,
+        paddingTop: 50,
     },
     topBox: {
         alignItems: 'center',
