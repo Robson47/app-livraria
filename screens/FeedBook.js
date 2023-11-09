@@ -103,14 +103,24 @@ const livros = [
 
 // COMPONENTE DE ITEM DE RENDERIZAÇÃO
 const bookItem = ({ item }) => {
-    return(
-    <View style={styles.book_container}>
-        <Image
-            style={styles.book_image}
-            source={item.imagem_livro}
-        />
-    </View>
-)};
+    return (
+        <View style={styles.book_container}>
+            <Image
+                style={styles.book_image}
+                source={item.imagem_livro}
+            />
+            <View style={styles.book_text_container}>
+                <Text style={styles.book_data}>{item.titulo_livro}</Text>
+                <Text style={styles.book_author}>{item.autor}</Text>
+                <Text style={styles.book_data}>{item.preco_livro}</Text>
+
+                <TouchableOpacity style={styles.book_button_details}><Text style={styles.book_button_text}>Detalhes</Text></TouchableOpacity>
+
+            </View>
+        </View>
+
+    );
+};
 
 export default function FeedBook() {
     return (
@@ -123,10 +133,11 @@ export default function FeedBook() {
             />
         </SafeAreaView>
     );
-}
+};
 
 const styles = StyleSheet.create({
     container: {
+        marginTop: 118,
         flex: 1,
         backgroundColor: '#161c3d',
         alignItems: 'center',
@@ -160,7 +171,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderColor: '#004ad1',
         marginBottom: 10,
-        backgroundColor: '#012a75',
+        backgroundColor: '#013491',
     },
     book_image: {
         width: 150,
@@ -173,6 +184,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     book_data: {
+        color: 'white',
         fontSize: 16,
         fontWeight: '600',
         width: '100%',
@@ -199,4 +211,4 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
     },
-})
+});
