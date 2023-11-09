@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function FeedBook() {
     return (
         <View style={styles.container}>
-            <Text>TELA 2</Text>
+            <Text>TELA 1</Text>
             <StatusBar style="auto" />
         </View>
     );

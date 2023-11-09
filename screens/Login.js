@@ -1,9 +1,11 @@
 import { Image, TouchableOpacity, StyleSheet, Text, SafeAreaView, TextInput, View } from 'react-native';
-import Materialicons from 'react-native-vector-icons/MaterialCommunityIcons'
+import Materialicons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { StatusBar } from 'expo-status-bar';
 
 export default function Login({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
+            <StatusBar style={styles.container} />
             <View style={styles.topBox}>
                 <Image style={styles.login}
                     source={require('../assets/imagens/login_small.png')}
@@ -101,7 +103,7 @@ const styles = StyleSheet.create({
         fontSize: 12
     },
     btnLogin: {
-        backgroundColor: '#28326b',
+        backgroundColor: '#012a75',
         padding: 20,
         borderRadius: 10,
         marginBottom: 20,
@@ -123,7 +125,7 @@ const styles = StyleSheet.create({
         marginBottom: 15
     },
     btnLogWith: {
-        backgroundColor: '#28326b',
+        backgroundColor: '#012a75',
         borderBlockColor: '#10152e',
         borderBlockEndColor: '#161c3d',
         borderBlockStartColor: '#161c3d',
